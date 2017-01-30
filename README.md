@@ -10,8 +10,7 @@ docker build -t openresty-dev .
 docker run -p 3000:3000 -v ./src:/src openresty-dev
 ```
 
-You should be able get to localhost:3000 in your browser. All Lua code changes
-take effect without restart as code caching is off.
+You should be able get to localhost:3000 in your browser.
 
 WARNING: Security and performance optimisation have not been considered at all here.
 
