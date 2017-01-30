@@ -5,7 +5,7 @@ Get up and running like:
 
 ```
 git clone git@github.com:devopsmakers/openresty-dev.git
-cd Openresty-dev
+cd openresty-dev
 docker build -t openresty-dev .
 docker run -p 3000:3000 -v ./src:/src openresty-dev
 ```
