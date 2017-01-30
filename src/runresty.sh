@@ -7,7 +7,7 @@ FILE_MD5=$(find /src/ -type f -exec md5sum {} \; | md5sum | cut -f1 -d ' ')
 /usr/bin/openresty -c /src/conf/nginx.conf &
 
 # Trap and handle signals sent to this scripts process
-trap "kill -SIGTERM $(pgrep openresty); exit" SIGHUP SIGINT SIGTERM SIGKILL
+trap "echo ; echo 'Stopping...'; exit" SIGHUP SIGINT SIGTERM SIGKILL
 
 # Test files every 2 seconds and reload Openresty on changes to any files
 while true
